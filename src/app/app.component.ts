@@ -20,4 +20,8 @@ export class AppComponent {
   ]
 
   searchValue : string = "";
+
+  getTotal(){
+    return this.dataObject.length;
+  }
 }
