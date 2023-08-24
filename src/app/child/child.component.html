@@ -1,4 +1,18 @@
 <p>child works!</p>
 <div>Total is : {{total}}</div>
 
+<div>
+    <table>
+      <tr *ngFor="let sampleData of records; let i= index" [ngStyle]="{backgroundColor: sampleData.status === 'present' ? 'green': 'red'}">
+        <td>{{i}}</td>
+        <td>{{sampleData.id}}</td>
+        <td>{{sampleData.name}}</td>
+        <td>{{sampleData.age}}</td>
+        <td>{{sampleData.status}}</td>
+        <td><button (click)="selectedValue= sampleData ">Select</button></td>
+      </tr>
+    </table>
+  </div>    
+  
+
 

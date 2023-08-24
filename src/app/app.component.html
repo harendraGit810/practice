@@ -17,10 +17,12 @@
   </table>
 </div>
 
-<form action="">
+
   <div>
     <input type="text" [(ngModel)]="searchValue" name="searchValue" [ngClass]="{changeBackground : searchValue!=''}">
     <span *ngIf="searchValue != ''">You searched: {{searchValue}}</span>
   </div>
-</form>
-<app-child [total]="getTotal()"></app-child>
+
+<app-child [total]="getTotal()" #child></app-child>
+
+<p>you selected: {{child.selectedValue?.name}}</p>
